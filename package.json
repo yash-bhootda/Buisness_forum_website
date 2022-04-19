@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
-  },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,5 +21,9 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon app.js"
+  } 
 }
