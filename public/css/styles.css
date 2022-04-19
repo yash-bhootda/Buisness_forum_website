@@ -1,0 +1,104 @@
+root {
+    --bs-font-sans-serif: 'Rubik', sans-serif;
+  }
+  body {
+    background-image: url("/img/bg_3.svg");
+    background-color: rgb(243,243,243);
+  }
+  
+  .container-xxl { max-width: 1530px; }
+
+  a { color: var(--bs-dark); }
+
+  .category__link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: 250ms all;
+  }
+  
+  .category__link:hover {
+    transform: scale(1.1);
+  }
+  
+  .category__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+    overflow: hidden;
+    border-radius: 8px;
+    object-fit: fill;
+  }
+
+  .category__img--large {
+    
+    object-fit: cover;
+  }
+  
+  .category__img img {
+    object-fit: fill;
+    height: 120px;
+  }
+  .category__img shadow
+  {
+    object-fit: cover;
+    height: 550px;
+  }
+
+
+.hero_illustr-hand{
+  position:absolute;
+  bottom: 18.2rem;
+  right: 420px;
+
+}
+.hero_illustr-plane{
+  position:absolute;
+  right: 120px;
+  bottom: 30rem;
+
+}
+
+.hero_illustr-wrap{
+  position:relative;
+  top: 100px;
+  margin-bottom: 90px;
+  /* paddding-bottom: 60px; */
+}
+
+.hero_illustr-leaves{
+  position:absolute;
+  right: 157px;
+  bottom: 8rem;
+}
+
+.hero_illustr-ball{
+  position: absolute;
+  right: 30rem;
+
+}
+
+.col-13
+{
+  font-weight: bold;
+}
+
+
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  
+}
+
+div.yrb
+{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}

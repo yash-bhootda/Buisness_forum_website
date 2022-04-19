@@ -1,0 +1,230 @@
+<div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
+    <div class="col-12 col-lg-6">
+        <!-- <img src="/img/hero-image.png" width="607" height="510" class="d-block mx-lg-auto img-fluid" loading="lazy"
+            alt="Cooking With Node.js"> -->
+        <div data-w-id="b9bc89e3-fe08-d373-2233-6ff7b6612753" class="hero_illustr-wrap" style="opacity: 1;"><img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e929ff713f410571efc78b_hero_illustr.svg"
+                loading="eager" alt="" class="hero_illustr"><img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e92a3657ec098468f8e35a_hero_illustr-ball.svg"
+                loading="eager"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="efc41afc-aa41-1220-92a1-6404ee71d175" alt="" class="hero_illustr-ball"><img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e929fe091d964706da567a_hero_illustr-plane.svg"
+                loading="eager"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="dea0c863-f41e-afa7-a678-846833323ca6" alt="" class="hero_illustr-plane"><img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e929ffced9f20df8478968_hero_illustr-leaves.svg"
+                loading="eager"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="62ae38c2-63d3-7d6b-cf2f-49eb6964c9df" alt="" class="hero_illustr-leaves">
+                <!-- <img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e929fea1922585df9efb9d_hero_illustr-leaves2.svg"
+                loading="eager"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="98d339bd-8824-268c-86b4-6732fa084a58" alt="" class="hero_illustr-leaves2"> -->
+                <img
+                src="https://assets.website-files.com/61e57244c283e5456130c457/61e92a002164bfe80a6941a3_hero_illustr-hand.svg"
+                loading="eager"
+                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                data-w-id="a5fea27e-8fe5-f07f-e5f6-8c5977f53fca" alt="" class="hero_illustr-hand"></div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+        <h1 class="display-5 fw-bold mb-3">Huge selection of upcoming businesses</h1>
+        <p class="lead">
+            Explore our huge selection of businesses including; unique lifestyle businesses, gorgeous art pieces, local
+            food businesses , fitness consultants and trainers , various home services.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/explore-latest" class="btn btn-primary btn-dark btn-lg px-4 me-md-2">Explore Latest</a>
+            <a href="/explore-random" class="btn btn-outline-secondary btn-lg px-4 me-md-2">Show Random</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+
+    <% if(categories != '') { %>
+        <% categories.forEach(function(category, index) { %>
+            <a href="/categories/<%- category.name %>" class="col text-center category__link">
+                <div class="category__img shadow">
+                  <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy">
+                </div>
+                <div class="pt-1"><%- category.name %></div>
+              </a>
+        <% }) %>
+    <% } %>
+
+     
+    <a href="/categories" class="col text-center category__link">
+        <div class="category__img shadow">
+            <img src="img/view-all.png" alt="View All Categories" loading="lazy">
+        </div>
+        <div class="pt-1">View All</div>
+    </a>
+</div>
+
+<!-- Categories End -->
+
+
+<!-- Latest Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Latest Businesses</h2>
+        <a href="/explore-latest" class="ms-auto">View More</a>
+    </div>
+    <div class="yrb1">
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+   
+
+        <% if(business != '') { %>
+            <% business.latest.forEach(function(Work , index){ %>
+            <a href="/Work/<%= Work._id %>" class="col text-center category__link">
+              <div class="category__img category__img--large shadow">
+                <img src="/uploads/<%= Work.image %>" alt="<%= Work.name %>" loading="lazy">
+              </div>
+              <div class="pt-1"><%= Work.name %></div>
+            </a>
+            <% }) %>
+          <% } else { %>
+            <p>No items found.</p>
+          <% } %>
+
+
+
+        
+
+    </div>
+    </div>
+</section>
+
+<!-- Latest End -->
+
+<!-- Electronics Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Electronic Businesses</h2>
+        <a href="/categories/Electronics" class="ms-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+   
+
+        <% if(business != '') { %>
+            <% business.Electronics.forEach(function(Work , index){ %>
+            <a href="/Work/<%= Work._id %>" class="col text-center category__link">
+              <div class="category__img category__img--large shadow">
+                <img src="/uploads/<%= Work.image %>" alt="<%= Work.name %>" loading="lazy">
+              </div>
+              <div class="pt-1"><%= Work.name %></div>
+            </a>
+            <% }) %>
+          <% } else { %>
+            <p>No items found.</p>
+          <% } %>
+
+
+
+        
+
+    </div>
+</section>
+
+<!-- Electronics End -->
+
+
+<!-- Fitness Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Fitness Businesses</h2>
+        <a href="/categories/Fitness" class="ms-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+   
+
+        <% if(business != '') { %>
+            <% business.Fitness.forEach(function(Work , index){ %>
+            <a href="/Work/<%= Work._id %>" class="col text-center category__link">
+              <div class="category__img category__img--large shadow">
+                <img src="/uploads/<%= Work.image %>" alt="<%= Work.name %>" loading="lazy">
+              </div>
+              <div class="pt-1"><%= Work.name %></div>
+            </a>
+            <% }) %>
+          <% } else { %>
+            <p>No items found.</p>
+          <% } %>
+
+
+
+        
+
+    </div>
+</section>
+
+<!-- Fitness End -->
+
+<!-- Clothing Start -->
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Clothing Businesses</h2>
+        <a href="/categories/Clothing" class="ms-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+   
+
+        <% if(business != '') { %>
+            <% business.Clothing.forEach(function(Work , index){ %>
+            <a href="/Work/<%= Work._id %>" class="col text-center category__link">
+              <div class="category__img category__img--large shadow">
+                <img src="/uploads/<%= Work.image %>" alt="<%= Work.name %>" loading="lazy">
+              </div>
+              <div class="pt-1"><%= Work.name %></div>
+            </a>
+            <% }) %>
+          <% } else { %>
+            <p>No items found.</p>
+          <% } %>
+
+
+
+        
+
+    </div>
+</section>
+
+<!-- Clothing End -->
+
+
+
+
+
+
+
+
+
+
+<!-- Submit - Start -->
+<section class="px-4 py-5 my-5 text-center">
+    <img src="/img/submit-business.png" class="d-block mx-auto mb-4 img-fluid"
+        alt="Create your business page for FREE today" width="566" height="208" loading="lazy">
+    <h1 class="display-5 fw-bold">Create your business page for FREE today</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Showcase your business in front of thousands of people for free.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/submit-work" class="btn btn-primary btn-dark btn-lg">Submit Page</a>
+        </div>
+    </div>
+</section>
+
+<!-- Submit - End -->

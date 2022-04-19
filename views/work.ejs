@@ -1,0 +1,41 @@
+
+<% if(work != null ) { %>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><%- work.name %></li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <img src="/uploads/<%- work.image %>" class="img-fluid sticky-top" style="top: 20px;" alt="<%- work.name %>" loading="lazy">
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="row">
+          <div class="col-12"><h1><%- work.name %></h1></div>
+          <div class="col-12 mb-4"><i class="bi bi-tag"></i> <%- work.category %></div>
+          <div class="col-12" style="white-space: pre-line;">
+            <h4>Description</h4>
+            <%- work.description %>
+          </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-12" style="white-space:pre-line ;">
+                <h4>E-Mail</h4>
+                <%- work.email %>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-12" style="white-space: pre-line;">
+                <h4>Phone Number</h4>
+                <%- work.phoneno %>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  <% } else { %>
+    <p>No item found.</p>
+  <% } %>
