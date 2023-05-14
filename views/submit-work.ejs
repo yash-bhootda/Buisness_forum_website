@@ -28,27 +28,32 @@
 
             <div class="col-13">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" id="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" required>
             </div>
 
             <div class="col-13">
                 <label for="name" class="form-label">Business Name</label>
-                <input type="text" name="name" id="name" class="form-control" >
+                <input type="text" name="name" id="name" class="form-control" required>
             </div>
 
             <div class="col-13">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" class="form-control" cols="30" rows="4"></textarea>
+                <textarea name="description" id="description" class="form-control" cols="30" rows="4" required></textarea>
             </div>
 
             <div class="col-13">
                 <label for="name" class="form-label">Phone Number</label><br>
-                <input type="text" name="phoneno" id="phoneno" class="form-control" >
+                <input type="text" name="phoneno" id="phoneno" class="form-control" pattern="[0-9]{10}" title="Incorrect input" required >
+            </div>
+
+            <div class="col-13">
+                <label for="name" class="form-label">Aadhar Number</label><br>
+                <input type="text" name="" id="" class="form-control" pattern="[0-9]{12}" title="Incorrect aadhar number" required >
             </div>
 
             <div class="col-12">
                 <label for="category">Select Category</label>
-                <select class="form-select form-control" name="category" aria-label="Category">
+                <select class="form-select form-control" name="category" aria-label="Category" required>
                     <option selected>Select Category</option>
                     <option value="Fitness">Fitness</option>
                     <option value="Dance">Dance</option>
@@ -57,6 +62,7 @@
                     <option value="Clothing">Clothing</option>
                 </select>
             </div>
+            <br>
 
             <div class="col-13">
                 <label for="image">Company Logo</label>
